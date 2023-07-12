@@ -1,6 +1,11 @@
 server:
   port: 9191
 
+logging:
+  level:
+    org.apache.kafka.clients: ERROR
+    org.springframework: ERROR
+
 spring:
   application:
     name: backend-resources
@@ -12,7 +17,7 @@ spring:
           issuer-uri: http://backend-keycloak-auth:8080/auth/realms/ITM
 
 keycloak:
-  realm: ITM
+  realm: ITM-Platform
   resource: backend-resources
   auth-server-url: http://backend-keycloak-auth:8080/auth
   credentials:

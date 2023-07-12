@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
+
 public class UserRequest {
     @NotBlank(message = "Username should not be blank")
     @Size(min = 2, max = 30, message = "Username should be between 2 and 30 characters long")

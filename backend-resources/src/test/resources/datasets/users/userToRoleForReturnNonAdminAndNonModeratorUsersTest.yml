@@ -1,0 +1,16 @@
+users_to_roles:
+  - id: e831b71d-f95e-48e5-a1d4-cc490e0d8fa0
+    role_id: a9faa73f-a85c-4fb6-aee1-4e1091e12b67
+    user_id: 58aead87-9f50-4d9a-9818-bc4ae7a341c4
+
+  - id: a7286d77-22ad-4240-93d9-8e11ecd4d6dd
+    role_id: 16b996fd-0dee-4a2c-8548-6aaadda8643d
+    user_id: dbb60c6d-16e7-41eb-8ae4-a201d66d2521
+
+  - id: 37baa9b8-725c-4418-8049-0f9414c94215
+    role_id: d164d2fc-956e-4098-83f2-b8d148355a9c
+    user_id: 0a3a6ecd-52b5-43a2-b998-3ceff01e7621
+
+  - id: c898ec1e-4b49-4ec6-a114-f7a4e16d5de2
+    role_id: 8810e396-a12a-4895-a053-b4fd31e40396
+    user_id: 75e5b102-d9a4-40f3-9ea5-08a9c35faca4

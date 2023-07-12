@@ -1,0 +1,22 @@
+users:
+  - id: 790212b3-fde1-42d3-af5a-a82d3e22e33f
+    email: "artemov@mail.com"
+    first_name: "Artem"
+    last_name: "Artemov"
+    profile_image_id: f016e176-88eb-44a7-9060-73995d6eb310
+    archived: "false"
+    created: "2023-04-19 11:21:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null
+
+  - id: 890212b3-fde1-42d3-af5a-a82d3e22e33f
+    email: "ivanivanov@mail.com"
+    first_name: "Ivan"
+    last_name: "Ivanov"
+    profile_image_id: d8bf60f7-d538-41a0-8f79-c590b40b74ea
+    archived: "false"
+    created: "2023-04-19 12:21:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null

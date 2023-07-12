@@ -64,7 +64,7 @@ public class UserControllerTest extends BaseIntegrationTest {
             Response response = Response.status(Response.Status.CREATED).location(new URI("user_id")).build();
             when(keycloak.realm(anyString()).users().create(any())).thenReturn(response);
             mvc.perform(requestWithContent(post("/api/users"), userRequest));
-            verify(keycloak.realm(anyString()).users(), times(1)).create(any());
+            verify(usersResource, times(1)).create(any());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,8 +93,6 @@ public class UserControllerTest extends BaseIntegrationTest {
             userRepresentation.setId(String.valueOf(userId));
             userRepresentation.setFirstName("John");
 
-            when(keycloak.realm(anyString())).thenReturn(mock(RealmResource.class));
-            when(keycloak.realm(anyString()).users()).thenReturn(mock(UsersResource.class));
             when(keycloak.realm(anyString()).users().get(anyString())).thenReturn(mock(UserResource.class));
             when(keycloak.realm(anyString()).users().get(anyString()).toRepresentation()).thenReturn(userRepresentation);
             when(keycloak.realm(anyString()).users().get(anyString()).roles()).thenReturn(mock(RoleMappingResource.class));
@@ -108,7 +106,6 @@ public class UserControllerTest extends BaseIntegrationTest {
 
             UserResponse userResponse = mapper.readValue(result.getResponse().getContentAsString(), UserResponse.class);
             Assertions.assertEquals("John", userResponse.getFirstName());
-
             verify(keycloak.realm(anyString()).users(), times(1)).get(any());
         }
         catch (Exception e) {

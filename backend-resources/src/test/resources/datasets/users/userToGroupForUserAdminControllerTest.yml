@@ -1,0 +1,8 @@
+users_to_groups:
+  - id: 9d58f0cc-3922-4276-b3da-f21d012f605a
+    group_id: 5c11b711-d77c-4836-a8c3-af0e670000b4
+    user_id: 58aead87-9f50-4d9a-9818-bc4ae7a341c4
+
+  - id: 40748a34-6d24-4c53-9a69-f95f98c38245
+    group_id: 5c11b711-d77c-4836-a8c3-af0e670000b4
+    user_id: dbb60c6d-16e7-41eb-8ae4-a201d66d2521

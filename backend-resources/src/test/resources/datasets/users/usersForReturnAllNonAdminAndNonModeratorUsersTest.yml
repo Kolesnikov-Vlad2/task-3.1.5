@@ -1,0 +1,44 @@
+users:
+  - id: 58aead87-9f50-4d9a-9818-bc4ae7a341c4
+    email: "sergey@mail.com"
+    first_name: "Sergey"
+    last_name: "Sergeyev"
+    profile_image_id: 6f3c9abd-d705-437d-ab48-54422140b71c
+    archived: "false"
+    created: "2023-04-29 11:22:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null
+
+  - id: dbb60c6d-16e7-41eb-8ae4-a201d66d2521
+    email: "petrov@mail.com"
+    first_name: "Petr"
+    last_name: "Petrov"
+    profile_image_id: 899bd318-0e48-4585-9a32-731fe6724d8d
+    archived: "false"
+    created: "2023-04-11 12:21:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null
+
+  - id: 0a3a6ecd-52b5-43a2-b998-3ceff01e7621
+    email: "admin@mail.com"
+    first_name: "Admin"
+    last_name: "Adminovich"
+    profile_image_id: ee9ce7ab-a483-4d87-92e7-91932b0a6b44
+    archived: "false"
+    created: "2023-04-19 12:21:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null
+
+  - id: 75e5b102-d9a4-40f3-9ea5-08a9c35faca4
+    email: "moderator@mail.com"
+    first_name: "Moderator"
+    last_name: "Moderatorovich"
+    profile_image_id: 666efd64-dfd4-4e68-9182-64238c2cd4a7
+    archived: "false"
+    created: "2023-04-19 12:21:10.182973"
+    created_by: 5c11b711-d77c-4836-a8c3-af0e670000b3
+    updated: null
+    updated_by: null

@@ -3,13 +3,12 @@ package com.itm.space.backendresources.configuration;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import static org.keycloak.OAuth2Constants.CLIENT_CREDENTIALS;
-import static org.keycloak.OAuth2Constants.PASSWORD;
 
-@Configuration
+@TestConfiguration
 public class KeycloakClientConfiguration {
     @Value("${keycloak.credentials.secret}")
     private String secretKey;
@@ -17,18 +16,19 @@ public class KeycloakClientConfiguration {
     private String clientId;
     @Value("${keycloak.auth-server-url}")
     private String authUrl;
+    @Value("${keycloak.port}")
+    private int port;
     @Value("${keycloak.realm}")
     private String realm;
 
     @Bean
     public Keycloak keycloak() {
         return KeycloakBuilder.builder()
-                .serverUrl(authUrl)
+                .serverUrl(authUrl + ":" + port)
                 .realm(realm)
                 .grantType(CLIENT_CREDENTIALS)
                 .clientId(clientId)
                 .clientSecret(secretKey)
                 .build();
     }
-
 }

@@ -27,12 +27,9 @@ import static org.mockito.Mockito.when;
 
 public class UserServiceTest extends BaseIntegrationTest {
 
+    @Autowired
     private UserService userService;
 
-    @Autowired
-    public UserServiceTest(UserService userService) {
-        this.userService = userService;
-    }
 
     @MockBean
     private Keycloak keycloak;
@@ -48,6 +45,12 @@ public class UserServiceTest extends BaseIntegrationTest {
 
     @MockBean
     private List<GroupRepresentation> groupRepresentations;
+
+    @MockBean
+    private RoleMappingResource roleMappingResource;
+
+    @MockBean
+    private MappingsRepresentation mappingsRepresentation;
 
     @BeforeEach
     public void setup() {
@@ -72,12 +75,10 @@ public class UserServiceTest extends BaseIntegrationTest {
         userRepresentation.setId(String.valueOf(userId));
         userRepresentation.setFirstName("John");
 
-        when(keycloak.realm(anyString())).thenReturn(mock(RealmResource.class));
-        when(keycloak.realm(anyString()).users()).thenReturn(mock(UsersResource.class));
-        when(keycloak.realm(anyString()).users().get(anyString())).thenReturn(mock(UserResource.class));
+        when(usersResource.get(anyString())).thenReturn(mock(UserResource.class));
         when(keycloak.realm(anyString()).users().get(anyString()).toRepresentation()).thenReturn(userRepresentation);
-        when(keycloak.realm(anyString()).users().get(anyString()).roles()).thenReturn(mock(RoleMappingResource.class));
-        when(keycloak.realm(anyString()).users().get(anyString()).roles().getAll()).thenReturn(mock(MappingsRepresentation.class));
+        when(keycloak.realm(anyString()).users().get(anyString()).roles()).thenReturn(roleMappingResource);
+        when(keycloak.realm(anyString()).users().get(anyString()).roles().getAll()).thenReturn(mappingsRepresentation);
         when(keycloak.realm(anyString()).users().get(anyString()).roles().getAll().getRealmMappings()).thenReturn(roleRepresentations);
         when(keycloak.realm(anyString()).users().get(anyString()).groups()).thenReturn(groupRepresentations);
 

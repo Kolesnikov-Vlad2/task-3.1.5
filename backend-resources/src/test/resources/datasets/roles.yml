@@ -1,0 +1,9 @@
+roles:
+  - id: 16b996fd-0dee-4a2c-8548-6aaadda8643d
+    name: "STUDENT"
+  - id: a9faa73f-a85c-4fb6-aee1-4e1091e12b67
+    name: "MENTOR"
+  - id: d164d2fc-956e-4098-83f2-b8d148355a9c
+    name: "ADMIN"
+  - id: 8810e396-a12a-4895-a053-b4fd31e40396
+    name: "MODERATOR"
