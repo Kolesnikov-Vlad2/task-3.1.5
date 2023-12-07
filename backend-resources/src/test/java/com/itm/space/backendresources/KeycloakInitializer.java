@@ -13,15 +13,39 @@ public class KeycloakInitializer implements ApplicationContextInitializer<Config
             .withExposedPorts(8080)
             .withEnv("KEYCLOAK_ADMIN", "admin")
             .withEnv("KEYCLOAK_ADMIN_PASSWORD", "admin")
-            .withRealmImportFile("keycloak/keycloak-realm.json");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
         container.start();
 
         TestPropertyValues.of(
+
+
                 "spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:" + container.getHttpPort() + "/realms/ITM-Platform",
                 "keycloak.port=" + container.getHttpPort()
+
+
         ).applyTo(applicationContext.getEnvironment());
     }
 }
