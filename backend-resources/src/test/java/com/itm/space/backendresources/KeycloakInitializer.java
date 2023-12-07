@@ -12,14 +12,7 @@ public class KeycloakInitializer implements ApplicationContextInitializer<Config
     public static final KeycloakContainer container = new KeycloakContainer(KEYCLOAK_IMAGE_NAME)
             .withExposedPorts(8080)
             .withEnv("KEYCLOAK_ADMIN", "admin")
-            .withEnv("KEYCLOAK_ADMIN_PASSWORD", "admin")
-
-
-
-
-
-
-
+           9
 
 
 
